@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>손금 & 사주 해석기</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('서비스 워커 등록 완료'))
+        .catch(err => console.error('서비스 워커 등록 실패:', err));
+    }
+  </script>
+</head>
+<body>
+  <h1>🔮 손금 & 사주 해석기</h1>
+
+  <section>
+    <h2>📷 손금 이미지 업로드</h2>
+    <input type="file" accept="image/*" id="imageInput" />
+    <canvas id="canvas" style="display:none;"></canvas>
+    <div id="palmResult">손금 이미지를 업로드하면 해석이 나옵니다.</div>
+  </section>
+
+  <section>
+    <h2>🎴 생년월일시 입력</h2>
+    <input type="date" id="birthDate" />
+    <input type="time" id="birthTime" />
+    <button onclick="analyzeFortune()">사주 & 오늘의 운세 보기</button>
+    <div id="fortuneResult">생년월일시를 입력하면 사주와 운세가 나옵니다.</div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

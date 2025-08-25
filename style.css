@@ -1,0 +1,32 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f0f4f8;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+section {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input, button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#palmResult, #fortuneResult {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+  white-space: pre-line;
+}
